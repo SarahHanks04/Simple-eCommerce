@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import { useContext } from 'react';
 import { assets } from '../assets/assets';
+import Title from '../Components/Title';
 
 const Collection = () => {
 
@@ -50,6 +51,13 @@ const Collection = () => {
             </div>
         </div>
 
+      </div>
+
+      {/* Right Side */}
+      <div className='flex-1'>
+        <div className='flex justify-between text-base sm:text-2xl mb-4'>
+          <Title />
+        </div>
       </div>
 
     </div>
