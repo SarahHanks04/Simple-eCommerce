@@ -6,12 +6,13 @@ import { ShopContext } from "../Context/ShopContext";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
-  const {setShowSearch, getCartCount} = useContext(ShopContext);
-
+  const { setShowSearch, getCartCount } = useContext(ShopContext);
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
-      <Link to='/'><img src={assets.logo} className="w-36" alt="" /></Link>
+      <Link to="/">
+        <img src={assets.logo} className="w-36" alt="" />
+      </Link>
 
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
@@ -36,15 +37,20 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center gap-6">
-        <img onClick={() => setShowSearch(true)} src={assets.search_icon} className="w-5 cursor-pointer" alt="" />
+        <img
+          onClick={() => setShowSearch(true)}
+          src={assets.search_icon}
+          className="w-5 cursor-pointer"
+          alt=""
+        />
 
         <div className="group relative">
           <Link to="/login">
-          <img
-            src={assets.profile_icon}
-            className="w-5 cursor-pointer"
-            alt=""
-          />
+            <img
+              src={assets.profile_icon}
+              className="w-5 cursor-pointer"
+              alt=""
+            />
           </Link>
 
           <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
